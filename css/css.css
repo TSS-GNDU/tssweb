@@ -72,105 +72,6 @@
 body{
 overflow:hidden;
 }
-/* Media Queries */
-@media screen and (max-width: 63em) {
-	.cbp-tm-menu {
-		font-size: 80%;
-	}
-}
-
-@media screen and (max-height: 25.25em), screen and (max-width: 51em) {
-
-	.cbp-tm-menu {
-		font-size: 100%;
-		position: relative;
-		text-align: center;
-		padding: 0;
-		top: auto;
-	}
-
-	.cbp-tm-menu > li {
-		display: block;
-		margin: 0;
-		border-bottom: 4px solid #D24726;
-	}
-
-	.cbp-tm-menu > li:first-child {
-		border-top: 4px solid #D24726;
-	}
-
-	li.cbp-tm-show > a,
-	.no-touch .cbp-tm-menu > li > a:hover,
-	.no-touch .cbp-tm-menu > li > a:active {
-		color: #fff;
-		background: #9E2102;
-	}
-
-	.cbp-tm-submenu {
-		position: relative;
-		display: none;
-		width: 100%;
-	}
-
-	.cbp-tm-submenu > li {
-		padding: 0;
-	}
-
-	.cbp-tm-submenu > li > a {
-		padding: 0.6em 2.3em 0.6em 0.6em;
-		border: none;
-		border-bottom: 2px solid #E98870;
-	}
-
-	.cbp-tm-submenu:after {
-		display: none;
-	}
-
-	.cbp-tm-menu .cbp-tm-show .cbp-tm-submenu {
-		display: block;
-		width: 100%;
-		left: 0;
-		margin: 0;
-		padding: 0;
-	}
-	/*#cbp-tm-menu{ position:relative !important; }*/
-
-}
-@media screen and (max-width: 55em) {
-
-	.container > header h1,
-	.container > header nav {
-		float: none;
-	}
-
-	.container > header > span,
-	.container > header h1 {
-		text-align: center;
-	}
-
-	.container > header nav {
-		margin: 0 auto;
-	}
-
-	.container > header > span {
-		text-indent: 30px;
-	}
-}
-
-@media screen and (max-height: 25.25em), screen and (max-width: 44.3125em) {
-
-	.filler-above,back
-	.filler-below {
-		position: relative;
-		background: #f0f0f0;
-		height: auto;
-	}
-}
-@media all and (min-width: 801px) and (max-width: 1024px), all and (min-width: 1025px) {
-	.about_line{
-		width:33.33333%;
-	}
-}
 
 /* reset  list style */
 .cbp-tm-menu,
@@ -180,12 +81,13 @@ overflow:hidden;
 
 /* set menu position; change here to set to relative or float, etc. */
 .cbp-tm-menu {
+	position: absolute;
 	display: block;
 	z-index: 1000;
 	width: 100%;
 	background: #DB6648;
-	text-align:left;
 	padding: 0 2em;
+	margin: 0;
 	text-transform: capitalize;
 }
 
@@ -202,11 +104,12 @@ overflow:hidden;
 	font-size: 1.2em;
 	display: block;
 	color: #fff;
+	cursor: pointer;
 }
 
 .no-touch .cbp-tm-menu > li > a:hover,
 .no-touch .cbp-tm-menu > li > a:active {
-	color: #9E2102;
+	color: #02639d;
 }
 
 /* sumbenu with transitions */
@@ -224,9 +127,9 @@ overflow:hidden;
 }
 
 .cbp-tm-show .cbp-tm-submenu {
-	width: 16em;
+	width: 14em;
 	left: 50%;
-	margin: 0 0 0 -8em;
+	margin: 0 0 0 -7em;
 	opacity: 1;
 	visibility: visible;
 	pointer-events: auto;
@@ -242,7 +145,7 @@ overflow:hidden;
 
 .cbp-tm-show-below .cbp-tm-submenu {
 	top: 100%;
-	padding-top: 10px;
+	padding-top: 12px;
 }
 
 /* extreme cases: not enough space on the sides */
@@ -281,7 +184,7 @@ the right position for the arrow
 
 .cbp-tm-show-below .cbp-tm-submenu:after {
 	bottom: 100%;
-	margin-bottom: -10px;
+	margin-bottom: -12px;
 }
 
 .cbp-tm-submenu:after {
@@ -301,7 +204,7 @@ the right position for the arrow
 
 .cbp-tm-submenu > li {
 	display: block;
-	background:#fff;
+	background: #fff;
 }
 
 .cbp-tm-submenu > li > a {
@@ -309,7 +212,7 @@ the right position for the arrow
 	display: block;
 	font-size: 1.2em;
 	position: relative;
-	color:#DB6648 !important;
+	color: #DB6648 !important;
 	border: 4px solid #fff;
 	-webkit-transition: all 0.2s;
 	-moz-transition: all 0.2s;
@@ -319,7 +222,7 @@ the right position for the arrow
 .no-touch .cbp-tm-submenu > li > a:hover,
 .no-touch .cbp-tm-submenu > li > a:active {
 	color: #fff;
-	background: #fff;
+	background: #47a3da;
 }
 
 /* the icons (main level menu icon and sublevel icons) */
@@ -417,7 +320,107 @@ the right position for the arrow
 .cbp-tm-icon-help:before {
 	content: "\e012";
 }
+/* Media Queries */
+@media screen and (max-width: 63em) {
+	.cbp-tm-menu {
+		font-size: 80%;
+	}
+}
 
+@media screen and (max-height: 25.25em), screen and (max-width: 51em) {
+
+	.cbp-tm-menu {
+		font-size: 100%;
+		position: relative !important;
+		text-align: center;
+		padding: 0;
+		top: auto !important;
+	}
+
+	.cbp-tm-menu > li {
+		display: block;
+		margin: 0;
+		border-bottom: 4px solid #D24726;
+	}
+
+	.cbp-tm-menu > li:first-child {
+		border-top: 4px solid #D24726;
+	}
+
+	li.cbp-tm-show > a,
+	.no-touch .cbp-tm-menu > li > a:hover,
+	.no-touch .cbp-tm-menu > li > a:active {
+		color: #fff;
+		background: #9E2102;
+	}
+
+	.cbp-tm-submenu {
+		position: relative;
+		display: none;
+		width: 100%;
+	}
+
+	.cbp-tm-submenu > li {
+		padding: 0;
+	}
+
+	.cbp-tm-submenu > li > a {
+		padding: 0.6em 2.3em 0.6em 0.6em;
+		border: none;
+		border-bottom: 2px solid #E98870;
+	}
+
+	.cbp-tm-submenu:after {
+		display: none;
+	}
+
+	.cbp-tm-menu .cbp-tm-show .cbp-tm-submenu {
+		display: block;
+		width: 100%;
+		left: 0;
+		margin: 0;
+		padding: 0;
+	}
+	.cbp-tm-menu #liOther{
+		display: none;
+	}
+
+}
+@media screen and (max-width: 55em) {
+
+	.container > header h1,
+	.container > header nav {
+		float: none;
+	}
+
+	.container > header > span,
+	.container > header h1 {
+		text-align: center;
+	}
+
+	.container > header nav {
+		margin: 0 auto;
+	}
+
+	.container > header > span {
+		text-indent: 30px;
+	}
+}
+
+@media screen and (max-height: 25.25em), screen and (max-width: 44.3125em) {
+
+	.filler-above,
+	.filler-below {
+		position: relative;
+		background: #f0f0f0;
+		height: auto;
+	}
+}
+@media all and (min-width: 801px) and (max-width: 1024px), all and (min-width: 1025px) {
+	.about_line{
+		width:33.33333%;
+	}
+}
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
 
@@ -427,12 +430,11 @@ body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
 
 body {
     font-family: 'Lato', Calibri, Arial, sans-serif;
-    color: white;
-    background: url("../images/crossword.png") !important;
+    color: #f0f0f0;
 }
 
 a {
-	color: #f0f0f0 !important;
+	color: #f0f0f0;
 	outline: none;
 	text-decoration: none;
 }
@@ -460,8 +462,7 @@ a:hover {
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	background: url("../images/crossword.png");
-
+	background: #f0f0f0;
 }
 
 .filler-above p {
@@ -473,19 +474,15 @@ a:hover {
 
 .filler-below {
 	top: 100%;
-	background:url("../images/crossword.png");
+	background: #85caf4;
 }
 
 .container > header h1 {
 	font-size: 2.125em;
 	line-height: 1.3;
-	margin: 0 0 0.5em 0;
+	margin: 0 0 0.6em 0;
 	float: left;
 	font-weight: 400;
-	-webkit-text-shadow: 2px 2px 3px rgb(29, 29, 29);
-	-moz-text-shadow: 2px 2px 3px rgb(29, 29, 29);
-	-o-text-shadow: 2px 2px 3px rgb(29, 29, 29);
-	text-shadow: 2px 2px 3px rgb(29, 29, 29);
 }
 
 .container > header > span {
@@ -522,7 +519,7 @@ a:hover {
 	margin-left: 4px;
 	position: absolute;
 	color: #fff;
-	background: #DB6648;
+	background: #47a3da;
 }
 
 .container > header nav {
@@ -539,7 +536,7 @@ a:hover {
 	background: #fff;
 	border-radius: 50%;
 	margin: 0 0.1em;
-	border: 4px solid #DB6648;
+	border: 4px solid #47a3da;
 }
 
 .container > header nav a > span {
@@ -548,7 +545,7 @@ a:hover {
 
 .container > header nav a:hover:before {
 	content: attr(data-info);
-	color: #DB6648;
+	color: #47a3da;
 	position: absolute;
 	width: 600%;
 	top: 120%;
@@ -558,7 +555,7 @@ a:hover {
 }
 
 .container > header nav a:hover {
-	background: #DB6648;
+	background: #47a3da;
 }
 
 .bp-icon:after {
@@ -569,7 +566,7 @@ a:hover {
 	font-variant: normal;
 	text-transform: none;
 	text-align: center;
-	color: #DB6648;
+	color: #47a3da;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -643,10 +640,6 @@ a:hover {
 .welcome{
 	margin-left:-20%
 	margin-top:13%;
-}
-.menuPosition{
-	position: relative;
-	margin-top:0px;
 }
 .blogHead{
 	font-family: 'Wire One';
@@ -943,7 +936,8 @@ background-image: linear-gradient(to bottom, #5F969C 0%, #092F40 100%);*/
 }
 a:hover{
 	color: white;
-	text-decoration: underline;
+	text-decoration: none
+	;
 }
 .pad{
 	padding: 0.8%;
@@ -1878,26 +1872,4 @@ div.span-1, div.span-2, div.span-3, div.span-4, div.span-5, div.span-6, div.span
 	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=90, Color=#9c9a9a)";/*IE 8*/
 	text-shadow: 0px 0px 5px #9c9a9a;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
 	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=90, Color=#9c9a9a); /*IE 5.5-7*/
-}
-
-@media(max-width: 1050px) {
-	.cbp-tm-menu > li {
-		margin: 0px;
-		border: none;
-	}
-	.cbp-tm-menu > li:nth-child(2) {
-		margin-left: 30px;
-	}
-	.cbp-tm-menu > li:not(li:first-child) {
-		font-size: .8em;
-	}
-}
-
-@media(max-width: 768px) {
-	.cbp-tm-menu > li:first-child {
-		border: none;
-	}
-	.cbp-tm-menu > li:nth-child(2) {
-		margin-left: 20px;
-	}
 }
