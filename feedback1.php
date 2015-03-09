@@ -112,7 +112,8 @@
 				
 			$_SESSION['feedback_user'] = $name;
 			$date = date('Y-m-d @ h:i:s A');
-			$feedback = $feedback.' '.$feedback1;
+			$append = "*************************************************************";
+			$feedback = $date."\n".$name.'@'.$company."\n".$feedback.' '.$feedback1."\n".$append;
 			if($handle =  fopen('feedback.txt' , 'a')){
 				fwrite($handle , "\n$feedback");
 				fclose($handle);
