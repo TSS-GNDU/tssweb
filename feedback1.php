@@ -195,7 +195,7 @@
 				if(isset($_POST['company'])){
 					$company1 = $_POST['company'];
 					
-					$query = "SELECT `company_name` FROM comapnies WHERE `id` ='$company1'";
+					$query = "SELECT `company_name` FROM companies WHERE `id` ='$company1'";
 				if($query_run=mysql_query($query)){
 					
 				while($company = mysql_fetch_assoc($query_run)){
@@ -206,14 +206,15 @@
 				
 			}
 				else{
-				$query = "SELECT `id`,`company_name` FROM comapnies WHERE 1";
+				$query = "SELECT `id`,`company_name` FROM companies WHERE 1";
 				if($query_run=mysql_query($query)){
 					echo '<option  value="">Company</option>';
 				while($company = mysql_fetch_assoc($query_run)){
 						echo '<option  value="'.$company['id'].'">'.$company['company_name'].'</option>';
 					
 				}
-				}}
+				}
+				}
 ?>
 
 				</select>	
