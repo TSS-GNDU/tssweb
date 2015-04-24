@@ -69,9 +69,6 @@
   font-weight: 400;
   src: local('Ubuntu'), url(../fonts/ubuntu.woff) format('woff');
 }
-body{
-overflow:hidden;
-}
 
 /* reset  list style */
 .cbp-tm-menu,
@@ -321,13 +318,37 @@ the right position for the arrow
 	content: "\e012";
 }
 /* Media Queries */
-@media screen and (max-width: 63em) {
+@media screen and (max-width: 75em) {
+	.committeeHead{
+		margin-top: 2% !important;
+	}
+	.hofImage{
+		margin-top: 7% !important;
+	}
+	.hof{
+		margin-top: 7% !important;
+	}
+}
+@media screen and (max-width: 70em) {
+	.committeeHead{
+		font-size: 2.5em !important;
+		margin-bottom: 1% !important;
+	}
+	.committees{
+		font-size: 1.7em !important;
+	}
+	.committeeContent{
+		font-size: 0.9em !important;
+		padding-bottom: 4% !important;
+	}
+}
+@media screen and (max-width: 66em) {
 	.cbp-tm-menu {
 		font-size: 80%;
 	}
 }
 
-@media screen and (max-height: 25.25em), screen and (max-width: 51em) {
+@media screen and (max-height: 25.25em), screen and (max-width: 53em) {
 
 	.cbp-tm-menu {
 		font-size: 100%;
@@ -384,9 +405,29 @@ the right position for the arrow
 	.cbp-tm-menu #liOther{
 		display: none;
 	}
-
+	.blogHead{
+		font-size: 3.7em !important;
+	}
 }
-@media screen and (max-width: 55em) {
+@media screen and (max-width: 62em) {
+	.btn2 img{
+		display: none;
+	}
+	.btn2 .column{
+		width: 100% !important;
+	}
+	.committeeContent{
+		padding-bottom: 0% !important;
+	}
+	.committees{
+		margin: 0%;
+	}
+	.btn2 .xplore{
+		padding-top: 2% !important;
+		text-decoration: underline;
+	}
+}
+@media screen and (max-width: 53em) {
 
 	.container > header h1,
 	.container > header nav {
@@ -405,6 +446,12 @@ the right position for the arrow
 	.container > header > span {
 		text-indent: 30px;
 	}
+	.hof{
+		font-size: 3.2em !important;
+	}
+	.hofContent{
+		font-size: 1.8em !important;
+	}
 }
 
 @media screen and (max-height: 25.25em), screen and (max-width: 44.3125em) {
@@ -415,12 +462,45 @@ the right position for the arrow
 		background: #f0f0f0;
 		height: auto;
 	}
+	.hof{
+		height: 50%;
+	}
+}
+@media screen and (max-width: 25em) {
+	.committeeHead{
+		font-size: 2.2em !important;
+		margin-bottom: 0% !important;
+	}
+	.committees{
+		font-size: 1.3em !important;
+	}
+	.committeeContent{
+		font-size: 0.8em !important;
+		font-weight: 100;
+		padding-bottom: 2% !important;
+	}
+	.xplore{
+		font-size: 0.9em;
+	}
 }
 @media all and (min-width: 801px) and (max-width: 1024px), all and (min-width: 1025px) {
 	.about_line{
 		width:33.33333%;
 	}
 }
+@media screen and (max-width: 22em) {
+	.hideLogo{
+		display: inline-block;
+		text-align: center;
+	}
+	.displayLogo{
+		display: none;
+	}
+	.clearfix.noMarLeft{
+		margin: auto !important;
+	}
+}
+/*=============media queries end here========*/
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
 
@@ -645,7 +725,7 @@ a:hover {
 	font-family: 'Wire One';
 	font-size:4.5em;
 	font-weight: bold;
-	margin-top:7.1%;
+	margin-top:4%;
 	padding-bottom: 3%;
 }
 
@@ -665,7 +745,7 @@ a:hover {
 	font-weight: bold;
 	font-size: 1em;
 	text-align: left;
-	padding: 4% 10% 15% 4%; 
+	padding: 4% 10% 18.1% 4%; 
 	text-align: justify;
 	letter-spacing: 0.06em;
 }
@@ -682,7 +762,7 @@ a:hover {
 	font-family:'Ubuntu';
 	font-size:3em;
 	margin-bottom: 3%;
-	margin-top: 7.1%;
+	margin-top: 3.1%;
 }
 .committees{
 	font-family:'Raleway-ExtraLight';
@@ -692,7 +772,8 @@ a:hover {
 .committeeContent{
 	font-family:'Raleway-ExtraLight' , sans-serif;
 	font-size:1em;
-	font-weight: bold;	
+	font-weight: bold;
+	padding-bottom: 9%;
 }
 .clubsHead{
 	font-family:'Ubuntu';
@@ -704,7 +785,8 @@ a:hover {
 .clubs{
 	font-family:'Raleway-ExtraLight';
 	font-size:2em;
-	font-weight: bold;	
+	font-weight: bold;
+	margin-top: 7%;
 }
 .clubContent{
 	font-family:'Wire One';
@@ -713,19 +795,21 @@ a:hover {
 	letter-spacing: 0.05em;
 }
 .hofImage{
-	margin-top: 10%;
+	margin-top: 13%;
 }
 .hof{
 	font-family:'Wire One' , sans-serif;
-	font-size:4em !important;
+	font-size:4em;
 	font-weight: bold;
-	text-transform: capitalize;	
+	text-transform: capitalize;
+	margin-bottom: 13%;
 }
 .hofContent{
 	font-family:'Wire One' , sans-serif;
 	font-size:2em;
 	letter-spacing: 0.05em;
 	font-weight: bold;
+	margin: 0px;
 }
 .hofContent1::first-letter{
 	text-transform: capitalize !important;
@@ -747,39 +831,29 @@ a:hover {
 	padding-bottom: 4%;
 	letter-spacing: 0.1em;
 }
-
-.takeLook{
-	margin-left: 81%;
-	padding-top: 7%;
-	padding-bottom: 1%; 
-}
 .funshun{
 	margin-top: 30%;
 }
 .btn1{
-	width:100%;
 	text-transform: capitalize;
 	color:white;
 	background: url("../images/noise.png") repeat scroll 0% 0% rgb(113, 39, 39);
-	padding-top: 1%;
+	height: 100vh;
 }
 
 .btn2{
-	width:100% !important;
-	padding-bottom:1%;
+	height: 93vh !important;
+	padding:2% 2% 0% 2%;
 	text-transform: capitalize !important;
-	color: black !important;	
-	overflow: hidden !important;
+	color: black !important;
 }
 .btn3{
-	width:100% !important;
-	padding-top:2%;
+	height: 93vh !important;
 	text-transform: lowercase !important;
 	background:url("../images/noise.png") repeat scroll 0% 0% #3793ca;
 	color:white !important;
-	overflow: hidden !important;
 	font-family: "Raleway","Arial",sans-serif !important;
-
+	position: relative !important;
 }
 
 .btn4{
@@ -877,7 +951,7 @@ background-image: linear-gradient(to bottom, #5F969C 0%, #092F40 100%);*/
 }
 .footerMenu2{
 	padding-top: 1%;
-	padding-bottom:2%;
+	padding-bottom:3%;
 	font-family:'Raleway-ExtraLight';
 	font-size: 0.8em;
 	font-weight: bold;
@@ -944,12 +1018,13 @@ a:hover{
 	font-size: 0.8em;
 }
 .xplore{
-	margin-left: 70% !important;
+	float: right;
+	margin-right: 3%;
 }
 .xplore1{
-	padding-top: 3%;
-	margin-left: 73% !important;
-	padding-bottom: 4%;
+	float: right;
+	margin-right: 7%;
+	margin-bottom: 2%;
 }
 .link1{
 	color: black !important;
@@ -1371,12 +1446,14 @@ a:hover{
 .events_des{
 	font-size:30px;
 	text-align:center;
+	color: rgb(0,0,0);
 }
 
 .events_hof{
 	font-size:4em;
 	font-weight:bold;
 	text-align:center;
+	margin-bottom: 3%;
 }
 .events_grad {
 	background: -webkit-linear-gradient(black, white); /* For Safari 5.1 to 6.0 */
@@ -1394,13 +1471,16 @@ a:hover{
 	font-family: 'Wire One';
 	font-size: 4em;
 	font-weight: bold;
-	color: black;
+	color: #DB6648;
 	padding-top: 10%;
 	letter-spacing: 0.075em;
 }
 .events_one{
 	color:rgb(27,27,27);
-	padding-top: 7%;
+	padding-top: 3% !important;
+}
+.events_one .column:first-child{
+	border-right: 1px rgb(150,150,150) solid;
 }
 .events_one1{
 	padding-bottom:25%;
@@ -1410,7 +1490,7 @@ a:hover{
 }
 .events_one2{
 	background-color:#fafafa;
-	background-image:linear-gradient(transparent, rgba(0, 0, 0, 0.06));	
+	background-image:linear-gradient(transparent, rgba(0, 0, 0, 0.06));
 }
 
 .title > h1{
@@ -1427,10 +1507,10 @@ a:hover{
 	padding-right:0px !important;
 	margin-left:0px !important;
 	margin-right:0px !important;
+	padding-top: 4% !important;
 }
 .events_noMargin .column{
-	padding-top:12%;
-	padding-bottom:9%;
+	padding-top:8%;
 }
 .events_content{
 	margin-top:10%;
@@ -1872,4 +1952,13 @@ div.span-1, div.span-2, div.span-3, div.span-4, div.span-5, div.span-6, div.span
 	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=90, Color=#9c9a9a)";/*IE 8*/
 	text-shadow: 0px 0px 5px #9c9a9a;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
 	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=90, Color=#9c9a9a); /*IE 5.5-7*/
+}
+/*==========New CSS Added By Anil==========*/
+.hideLogo{
+	display: none;
+}
+
+body .ui.grid{
+	margin-left:0!important;
+	margin-right:0!important
 }

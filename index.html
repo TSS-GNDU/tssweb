@@ -1,13 +1,4 @@
-<?php
-// This code is for updating recent blog posts. Please don't remove it.
-function __autoload($class) {
-	include "include/class/class.".$class.".inc";
-}
 
-$blog = new Blog();
-$blogPost = $blog->fetchLatest(0, 1)[0];
-
-?>
 <!-- 
 
 Wanna learn how to code it:
@@ -40,18 +31,31 @@ We will teach you how to do it
 		<link rel="stylesheet" type="text/css" href="css/css.css" />
 	</head>
 	<body>
-		<div class="sectionScroll container">
+		<div style="display:none;">
+			<?php
+				// This code is for updating recent blog posts. Please don't remove it.
+				function __autoload($class) {
+					include "include/class/class.".$class.".inc";
+				}
+
+				$blog = new Blog();
+				$blogPost = $blog->fetchLatest(0, 1)[0];
+
+			?>
+		</div>
+		<div class="container">
 			<header class="clearfix noMarLeft">
 				<table>
-					<tr>
+					<tr class="displayLogo">
 						<td><img src="images/logowhite.png" class="tssLogo shadowed"/></td>
 						<td><h1>Technical Students' Society</h1></td>
 					</tr>
 				</table>
+				<div class="hideLogo"><h1>Technical Students' Society</h1></div>
 			</header>
 				
 			<div id="boxgallery" class="boxgallery" data-effect="effect-1">
-				<div class="panel"><img src="images/utpann.jpg" alt="Happy Diwali"/></div>
+				<div class="panel"><img src="images/utpann.jpg" alt="Utpann"/></div>
 				<div class="panel"><img src="images/team.jpg" alt="Team"/></div>
 				<div class="panel"><img src="images/events.jpg" alt="Events"/></div>
 				<div class="panel"><img src="images/dept.jpg" alt="Department"/></div>
@@ -59,7 +63,10 @@ We will teach you how to do it
 			
 		</div>
 		
-		<ul id="cbp-tm-menu" class="cbp-tm-menu">
+		
+		
+		<div class="btn1 text-shadow center aligned">
+			<ul id="cbp-tm-menu" class="cbp-tm-menu">
 				<li id="liFirst">
 					<a><h2>TSS</h2></a>
 				</li>
@@ -103,10 +110,8 @@ We will teach you how to do it
 					</ul>
 				</li>
 			</ul>
-		
-		<div class="sectionScroll btn1 text-shadow center aligned">
 			<div class="blogHead textCenter">Recent Blog Posts</div>
-			<div class="ui grid">
+			<div class="ui doubling grid">
 				<div class="four wide column">
 					<div class="blogGrid1">
 						<p class="blogGrid2Head"><?php echo $blogPost['title']; ?></p>
@@ -123,26 +128,26 @@ We will teach you how to do it
 			</div>
 		</div>
 
-		<div class="sectionScroll btn2 center aligned">
+		<div class="btn2 center aligned">
 			<p class="committeeHead textCenter">Committees</p>
 			<div class="ui three column doubling grid">
 				<div class="column center aligned">
 					
-						<img src="images/finance.png" width="50%" height="50%"/>
+						<img src="images/finance.png"/>
 						<div><p class="committees">Finance Committee</p></div>
 						<p class="committeeContent">I manage all the funds of TSS.</p>
 					
 				</div>
 				<div class="column center aligned">
 					
-						<img src="images/permission.png" width="50%" height="50%"/>
+						<img src="images/permission.png"/>
 						<div><p class="committees">Permissions Committee</p></div>
 						<p class="committeeContent">I arrange all the permissions needed by our members to conduct an event.</p>
 					
 				</div>
 				<div class="column center aligned">
 					
-						<img src="images/sponsor.png" width="50%" height="50%"/>
+						<img src="images/sponsor.png"/>
 						<div><p class="committees">Sponsorship Committee</p></div>
 						<p class="committeeContent">I find and persuade sponsors to invest in our various events.</p>
 					
@@ -154,69 +159,69 @@ We will teach you how to do it
 		</div>
 	
 
-			<div class="sectionScroll btn3">
-				
-				<div class="ui two column grid">
-					<div class="column center aligned">
-						<div class="hofImage"><img src="images/hof.png" width="60%" height="85%"/></div>
-					</div>
-					<div class="column">
-						<div class="ui header"><p class="hof">Hall Of Fame</p></div>
-						<div style="width:50%;"><p class="hofContent">Technical Students' Society,GNDU honours every year the alumini of TSS in Hall Of Fame.</p></div>
-						<div class="xplore1"><a href="http://www.halloffame.tss-gndu.com"><img src="images/door.png"></a></div>
-					</div>
+		<div class="btn3">
+			
+			<div class="ui two column grid">
+				<div class="column center aligned">
+					<div class="hofImage"><img src="images/hof.png"/></div>
 				</div>
-				
-			</div>
-
-
-			<div class="sectionScroll btn4">
-				
-					<div class="eventHead textCenter">Events</div>
-					<div class="eventContent textCenter">Here, U can see all past events and all the events going on.Moreover,take a peek on the events to be held.</div>
-				
-
-				<div class="takeLook"><a href="events.html"><img src="images/arrowWhite1.png"></a></div>
+				<div class="column">
+					<div class="ui header"><p class="hof">Hall Of Fame</p></div>
+					<div style="width:50%;"><p class="hofContent">Technical Students' Society,GNDU honours every year the alumini of TSS in Hall Of Fame.</p></div>
+					<div class="xplore1"><a href="http://www.halloffame.tss-gndu.com"><img src="images/door.png"></a></div>
+				</div>
 			</div>
 			
-			<div class="sectionScroll btn5">
-				<p class="clubsHead">Clubs &amp Hobby Groups</p>
-				<div class="ui four column doubling grid mobile">
-					<div class="column center aligned">
-						
-							<img src="images/technical.png" width="70%"/ >
-							<div><p class="clubs">Technical</p></div>
-							<div style="margin-top:-10%;"><p class="clubContent">Programming in blood.</p></div>
-						
-					</div>
-					<div class="column center aligned">
-						
-							<img src="images/literary.png" width="70%" />
-							<div><p class="clubs">Literary</p></div>
-							<div style="margin-top:-10%;"><p class="clubContent">Guiding towards goal.</p></div>
-						
-					</div>
-					<div class="column center aligned">
-						
-							<img src="images/arts1.png"  width="70%"/>
-							<div><p class="clubs">Arts</p></div>
-							<div style="margin-top:-10%;"><p class="clubContent">Creating masterpieces.</p></div>	
-							
-					</div>
-					<div class="column center aligned">
-						
-							<img src="images/music.png" width="70%" />
-							<div><p class="clubs">Music</p></div>
-							<div style="margin-top:-10%;"><p class="clubContent">Melodious...It is.</p></div>
-						
-						<div style="margin-left:45%;padding-bottom:7%;"><a href="clubs.html" target="_blank"><img src="images/arrow1.png"></a></div>
-					</div>
+		</div>
+
+
+		<!--<div class="btn4">
+			
+				<div class="eventHead textCenter">Events</div>
+				<div class="eventContent textCenter">Here, U can see all past events and all the events going on.Moreover,take a peek on the events to be held.</div>
+			
+
+			<div class="xplore" style="padding-top:3%;"><a href="events.html"><img src="images/arrowWhite1.png"></a></div>
+		</div>
+		
+		<div class="btn5">
+			<p class="clubsHead">Clubs &amp Hobby Groups</p>
+			<div class="ui four column doubling grid">
+				<div class="column center aligned">
+					
+						<img src="images/technical.png"/ >
+						<div class="clubs">Technical</div>
+						<div class="clubContent">Programming in blood.</div>
 					
 				</div>
+				<div class="column center aligned">
+					
+						<img src="images/literary.png"/>
+						<div class="clubs">Literary</div>
+						<div class="clubContent">Guiding towards goal.</div>
+					
+				</div>
+				<div class="column center aligned">
+					
+						<img src="images/arts1.png"/>
+						<div class="clubs">Arts</div>
+						<div class="clubContent">Creating masterpieces.</div>	
+						
+				</div>
+				<div class="column center aligned">
+					
+						<img src="images/music.png"/>
+						<div class="clubs">Music</div>
+						<div class="clubContent">Melodious...It is.</div>
+					
+					<div class="xplore" style="padding-top:15%;"><a href="clubs.html" target="_blank"><img src="images/arrow1.png"></a></div>
+				</div>
 				
-			</div>		
+			</div>
+			
+		</div>
 		
-		<div class="sectionScroll myFoot">
+		<div class="myFoot">
 			<div class="textMargin">
 				<p class="aboutHead">About TSS</p>
 				<p class="aboutContent">The Technical Students Society (T.S.S.) is a student body of the CSE Department, GNDU, Asr. It is an organization of the Students, by the Students and for the Students, established in the year 2003.</p>
@@ -259,7 +264,7 @@ We will teach you how to do it
 				</div>
 			
 
-		</div>
+		</div>-->
 
 		<!-- Drop Shadow Filter -->
 		<svg height="0" xmlns="http://www.w3.org/2000/svg">
@@ -286,9 +291,11 @@ We will teach you how to do it
 			new BoxesFx( document.getElementById( 'boxgallery' ) );
 		</script>
 		<script type="text/javascript">
-			$(".cbp-tm-menu #liFirst").click(function(){
-				$(".cbp-tm-menu #liOther").toggle();
-			});
+			if($(window).width() < 832){
+				$(".cbp-tm-menu #liFirst").click(function(){
+					$(".cbp-tm-menu #liOther").toggle();
+				});
+			}
 		</script>
 		
 	</body>
