@@ -319,14 +319,21 @@ the right position for the arrow
 }
 /* Media Queries */
 @media screen and (max-width: 75em) {
-	.committeeHead{
-		margin-top: 2% !important;
-	}
 	.hofImage{
 		margin-top: 7% !important;
 	}
 	.hof{
 		margin-top: 7% !important;
+	}
+	.myFoot{
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+	.myFoot .aboutHead{
+		font-size: 3.2em;
+	}
+	.myFoot .aboutContent{
+		font-size: 1.7em;
 	}
 }
 @media screen and (max-width: 70em) {
@@ -340,6 +347,33 @@ the right position for the arrow
 	.committeeContent{
 		font-size: 0.9em !important;
 		padding-bottom: 4% !important;
+	}
+	.hofImage > img{
+		width: 250px;
+	}
+	.xplore1 img{
+		width: 70px;
+	}
+	.clubsHead{
+		font-size: 2.5em !important; 
+	}
+	.clubs{
+		font-size: 1.6em !important;
+	}
+	.clubContent{
+		font-size: 1.4em !important;
+	}
+	.btn2 .column > img{
+		width: 43%;
+	}
+	.btn5 .column > img{
+		width: 60%;
+	}
+	.myFoot .aboutHead{
+		font-size: 3em;
+	}
+	.myFoot .aboutContent{
+		font-size: 1.5em;
 	}
 }
 @media screen and (max-width: 66em) {
@@ -409,7 +443,7 @@ the right position for the arrow
 		font-size: 3.7em !important;
 	}
 }
-@media screen and (max-width: 62em) {
+@media screen and (max-width: 61.95em) {
 	.btn2 img{
 		display: none;
 	}
@@ -425,6 +459,35 @@ the right position for the arrow
 	.btn2 .xplore{
 		padding-top: 2% !important;
 		text-decoration: underline;
+	}
+	.btn5 .column img{
+		display: none;
+	}
+	.btn5{
+		padding: 2% 7% 0% 7%;
+	}
+	.myFoot .three.column.doubling.grid > div{
+		display: none;
+	}
+	.myFoot .three.column.doubling.grid > div:nth-child(3){
+		display: inline-block;
+		width: 100%;
+	}
+	.connected{
+		margin-top: 1.5% !important;
+	}
+	.myFoot .aboutHead{
+		padding-top: 6%;
+		padding-bottom: 2%;
+	}
+	.myFoot .aboutContent{
+		padding-bottom: 2.5%;
+	}
+	.footDivider{
+		padding-bottom: 2%;
+	}
+	.credits , .developer{
+		font-size: 0.8rem !important;
 	}
 }
 @media screen and (max-width: 53em) {
@@ -452,8 +515,47 @@ the right position for the arrow
 	.hofContent{
 		font-size: 1.8em !important;
 	}
+	.eventHead{
+		font-size: 3.5em !important;
+		padding-top: 16% !important;
+	}
+	.eventContent{
+		font-size: 1.6em !important;
+	}
+	.xplore img{
+		width: 87%;
+	}
+	.xplore{
+		margin-right: 0% !important;
+	}
+	.creditsPane .column{
+		width: 100% !important;
+	}
+	.creditsPane div:first-child{
+		margin: 1% 0% 0.3% 0% !important;
+	}
+	.creditsPane div:last-child{
+		margin: 0% 0% 1% 0% !important;
+	}
+	.credits,.developer{
+		text-align: center !important;	
+		padding: 0% !important;
+	}
 }
-
+@media screen and (max-width: 47.95em) {
+	.clubs{
+		margin: 0% !important;
+	}
+	.btn5 .column{
+		margin: 1% !important;
+	}
+	.clubsHead{
+		padding-bottom: 0% !important;
+	}
+	.btn5 .xplore img{
+		bottom: 0px;
+	}
+}
 @media screen and (max-height: 25.25em), screen and (max-width: 44.3125em) {
 
 	.filler-above,
@@ -462,8 +564,24 @@ the right position for the arrow
 		background: #f0f0f0;
 		height: auto;
 	}
+	.btn3 .grid .column:first-child{
+		display: none;
+	}
+	.btn3 .grid .column:nth-child(2){
+		width: 100% !important;
+		text-align: center;
+	}
+	.btn3 .grid .column:nth-child(2) div:nth-child(2){
+		width:100% !important;
+	}
+	.xplore1{
+		bottom: 0% !important;
+	}
 	.hof{
-		height: 50%;
+		margin-bottom: 5% !important;
+	}
+	.hofContent{
+		margin-bottom: 5% !important;
 	}
 }
 @media screen and (max-width: 25em) {
@@ -482,6 +600,34 @@ the right position for the arrow
 	.xplore{
 		font-size: 0.9em;
 	}
+	.clubsHead{
+		font-size: 2.3em !important; 
+		padding-bottom: 2% !important;
+	}
+	.clubs{
+		font-size: 1.4em !important;
+	}
+	.clubContent{
+		font-size: 0.8em !important;
+		font-family: "Raleway-ExtraLight",sans-serif !important;
+		padding-bottom: 1.5%;
+	}
+	.btn5 .xplore{
+		margin-right: -7% !important;
+	}
+	.myFoot .aboutHead{
+		font-size: 2.6em;
+	}
+	.myFoot .aboutContent{
+		font-size: 1.3em;
+		letter-spacing: 0.06em;
+	}
+	.footerMenuHeader{
+		font-size: 0.9em !important;
+	}
+	.footerMenu2{
+		font-size: 0.7em !important;
+	}
 }
 @media all and (min-width: 801px) and (max-width: 1024px), all and (min-width: 1025px) {
 	.about_line{
@@ -490,7 +636,7 @@ the right position for the arrow
 }
 @media screen and (max-width: 22em) {
 	.hideLogo{
-		display: inline-block;
+		display: inline-block !important;
 		text-align: center;
 	}
 	.displayLogo{
@@ -779,8 +925,7 @@ a:hover {
 	font-family:'Ubuntu';
 	font-size:3em;
 	text-align: center;
-	margin-top: 6%;
-	
+	padding: 5% 0% 3% 0%;
 }
 .clubs{
 	font-family:'Raleway-ExtraLight';
@@ -802,7 +947,7 @@ a:hover {
 	font-size:4em;
 	font-weight: bold;
 	text-transform: capitalize;
-	margin-bottom: 13%;
+	margin-bottom: 4%;
 }
 .hofContent{
 	font-family:'Wire One' , sans-serif;
@@ -819,7 +964,7 @@ a:hover {
 	font-family: 'Wire One';
 	font-size: 4em;
 	font-weight: bold;
-	padding-top: 17%;
+	padding-top: 12%;
 	letter-spacing: 0.05em;
 	text-transform: capitalize !important;
 }
@@ -828,11 +973,8 @@ a:hover {
 	font-size: 2em;
 	font-weight: bold;
 	margin-top: 4%;
-	padding-bottom: 4%;
+	padding: 0% 3% 5% 3%;
 	letter-spacing: 0.1em;
-}
-.funshun{
-	margin-top: 30%;
 }
 .btn1{
 	text-transform: capitalize;
@@ -857,23 +999,16 @@ a:hover {
 }
 
 .btn4{
-	width:100% !important;
-	padding-top:2%;
-	padding-bottom:1%;
+	height:93vh;
 	text-transform: lowercase !important;
-	color:white;	
-	overflow: hidden !important;
+	color:white;
 	background: url('../images/event4.jpg') center center;
 	background-size: 100% 100%;
 }
 .btn5{
-	width:100% !important;
-	padding-top:1%;
+	height:93vh;
 	text-transform: capitalize !important;
-	color:black !important;	
-	overflow: hidden !important;
-	
-	
+	color:black !important;
 }
 
 .divide{
@@ -907,11 +1042,10 @@ a:hover {
 */
 .myFoot{
 	/*background-color: rgb(9,47,64);*/
-	width:100% !important;
-	margin-top: 0% !important;
+	height:83vh;
+	color: #ffffff;
 	text-transform: capitalize !important;
-	text-align: center;	
-	overflow: hidden !important;
+	text-align: center;
 	background:url('../images/noise.png') repeat scroll 0% 0% rgb(46,16,32);
 	opacity: 0.8;
 	/*background-image: -webkit-gradient(
@@ -928,41 +1062,29 @@ background-image: -ms-linear-gradient(bottom, #5F969C 0%, #092F40 100%);
 background-image: linear-gradient(to bottom, #5F969C 0%, #092F40 100%);*/
 
 }
-.textMargin{
-	margin-top: -2.5% !important;
-	color: white !important;
-}
 .footerMenuHeader{
 	font-family:'Raleway-ExtraLight';
 	font-size: 1em;
 	font-weight: bold;
-	color: white;
 	text-transform: uppercase;
-}
-.footerMenuBody{
-	margin-top: 7% !important;
 }
 .footerMenu{
 	font-family:'Raleway-ExtraLight';
 	font-size: 0.8em;
 	font-weight: bold;
-	color: white;
 	padding: 2%;
 }
 .footerMenu2{
 	padding-top: 1%;
-	padding-bottom:3%;
 	font-family:'Raleway-ExtraLight';
 	font-size: 0.8em;
 	font-weight: bold;
 	letter-spacing: 0.05em;
-	color: white !important;
 }
 
 .footDivider{
 	padding-left:5% !important;
 	padding-right:5% !important;
-	margin-top: -1.5% !important;
 }
 
 .connected{
@@ -973,24 +1095,23 @@ background-image: linear-gradient(to bottom, #5F969C 0%, #092F40 100%);*/
 	text-decoration: none !important;
 }
 .creditsPane{
-	width: 100%;
-	margin:0px !important;
-	background-color: black;
-	color:white;
+	background-color: #333333;
+	color: #ffffff;
 	font-family: 'Raleway-ExtraLight';
 	font-weight: bold;
-	padding-top: 0.5% !important;
-	padding-bottom: 0.5% !important;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+	position: relative;
 	bottom: 0;
 }
 .credits{
 	padding-left: 5%;
-	font-size: 0.9rem !important;
+	font-size: 0.9rem;
 }
 .developer{
 	padding-right: 5%;
-	font-size: 0.9rem !important;
-	text-align: right !important;
+	text-align: right;
+	font-size: 0.9rem;
 }
 .developer1{
 	color:gold !important;
@@ -999,32 +1120,32 @@ background-image: linear-gradient(to bottom, #5F969C 0%, #092F40 100%);*/
 	font-size:4em;
 	font-family: 'Wire One';
 	font-weight: bold;
-	padding-top:5%;
+	padding-top:4%;
+	padding-bottom: 1%;
 }
 .aboutContent{
 	font-size:2em;
 	font-weight: bold;
 	font-family: 'Wire One';
 	letter-spacing: 0.05em;
-	margin-top: -3%;
 }
 a:hover{
 	color: white;
-	text-decoration: none
-	;
-}
-.pad{
-	padding: 0.8%;
-	font-size: 0.8em;
+	text-decoration: none;
 }
 .xplore{
 	float: right;
 	margin-right: 3%;
 }
+.xplore img{
+	position: relative;
+	bottom: -30px;
+}
 .xplore1{
+	position: relative;
 	float: right;
 	margin-right: 7%;
-	margin-bottom: 2%;
+	bottom: 20%;
 }
 .link1{
 	color: black !important;
